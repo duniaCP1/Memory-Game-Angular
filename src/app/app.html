@@ -1,0 +1,42 @@
+@if(!jugarPartida){
+  <div class="login">
+    <img src="cardsDeck/titol.png" alt="Joc de la memoria" width="300" height="200">
+
+    <li><label class="usuari"><strong>Usuari</strong></label></li>
+    <input type="text" [(ngModel)]="nouUsuari" placeholder="Indica el teu usuari" />
+
+    <li><label><strong>Numero de barrejes</strong></label></li>
+    <input type="number" min="1" [(ngModel)]="numBarrejes" />
+
+    <div class="botons">
+      <button type="submit" (click)="introduirUsuaris()">Guardar configuració</button>
+      <button type="submit" (click)="mostrarImatges()" [disabled]="!nom">Començar</button>
+
+      <div class="submenu-contenidor">
+        <button type="submit" (click)="mostrarUsuaris()">Rànquing</button>
+        @if(veureUsuaris){
+          <div class="ranquing-submenu">
+            <ul>
+              @for(usuari of usuaris; track usuari.id){
+                <li>{{usuari.nom}}; {{usuari.partides}}</li>
+              }
+            </ul>
+          </div>
+        }
+      </div>
+
+      <button type="submit" (click)="esborrarRanking()">Esborrar Rànquing</button>
+    </div>
+  </div>
+}
+
+<div class="tauler">
+  @for (img of imatges; track img.id) {
+    <img class="images"
+         [src]="img.mostrarTapa ? 'cardsDeck/back_card.png' : img.nom"
+         (click)="girarCarta(img)" />
+  }
+ 
+</div>
+
+<router-outlet />

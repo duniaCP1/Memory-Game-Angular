@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #90caf9, #e3f2fd);
+  min-height: 100vh;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #e0f3ff, #b3d9ff);
+  padding: 2rem;
+  border-radius: 20px;
+  width: 350px;
+  margin: 50px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login img {
+  margin-bottom: 20px;
+}
+
+.login li {
+  list-style: none;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.login input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #0077cc;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.botons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.botons button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  width: 70%;
+  transition: background-color 0.3s;
+}
+
+.botons button:hover {
+  background-color: #005fa3;
+}
+
+.submenu-contenidor {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ranquing-submenu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f4fbff;
+  border: 2px solid #0077cc;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.ranquing-submenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ranquing-submenu li {
+  background-color: #e7f4ff;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 6px;
+  text-align: center;
+  color: #003e66;
+  font-weight: 500;
+}
+
+.tauler {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  gap: 12px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.images {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.images:hover {
+  transform: scale(1.05);
+}
