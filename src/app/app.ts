@@ -134,7 +134,7 @@ export class App {
 
     }));
 
-    let seconds = 30;
+    let seconds = 10;
     const tmp = setInterval(() => {
       seconds--;
       if (seconds === 0) {
